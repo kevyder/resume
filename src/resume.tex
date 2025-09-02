@@ -1,152 +1,203 @@
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
-\usepackage{fancyhdr}
-
-
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% -- Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% -- Sections Formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% -- Custom Commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeItemC}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-% -- Document/CV begins
-\begin{document}
-
-% -- [Header]
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textbf{\href{https://www.linkedin.com/in/shaiqkar/}{\Large Shaiq Iqbal}} & Email : \href{mailto:shaiqkar@gmail.com}{shaiqkar@gmail.com}\\
-	\href{https://www.linkedin.com/in/shaiqkar/}{{https://www.linkedin.com/in/shaiqkar/}} & Mobile : +917006343764 \\
-\end{tabular*}
-
-% -- [Education]
-\section{Education}
-    \resumeSubHeadingListStart
-        \resumeSubheading
-            {Presidency University}{Bengaluru, India}
-            {B.Tech in Computer Science;  CGPA: 8.3}{Aug 2018 -- Jun 2022}
-    \resumeSubHeadingListEnd
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
 
-% -- [Experience]
-\section{Experience}
-    \resumeSubHeadingListStart
-        \resumeSubheading
-            {Webknot Technologies}{Bengaluru, Karnataka}
-            {Senior Software Engineer}{Jul 2022 - Present}
-        \resumeItemListStart
-            \resumeItem
-                {HDFC Mobile Banking}
-                {Designed and implemented a data synchronization pipeline to efficiently update merchant billing details for the banking app. Leveraged GCS gRPC channels, Pub/Sub, and \textbf{PostgreSQL Copy} to reliably update more than \textbf{48K} merchant records with a \textbf{sub-3 second} processing time. Improved batch  performance by \textbf{12\%} by optimizing buffer allocation.}
-            \resumeItemC
-                {Developed a full-text search engine utilizing PostgreSQL full-text search capabilities, serving \textbf{10M} users. Optimized the solution by pre generating \textbf{8M} ts vectors based on merchant names, and leveraging Postgres functional indexes to enable sub-second query performance.}
-            \resumeItemC
-                {Written REST/gRPC API’s and Scalable Micro Services in Spring Boot, Golang and working with cross functional teams including Admin, CS, UPI and Net Banking.}
-            \resumeItem
-                {ScaleLinode (Collaboration with Akamai)}
-                {Spearheaded the design and development of a highly available auto-scaling platform for virtual machines on Linode, replicating key AWS capabilities. Architected \textbf{15+} microservices on Kubernetes to manage VM lifecycle, secure credential storage, and CI/CD automation.}
-            \resumeItemC
-                {Created \textbf{Gather}, a real-time system metrics collection tool using gRPC streams, with concurrent data gathering of \textbf{20+} system metrics and \textbf{time-series} storage. Built internal Go packages including \textbf{Quark} for distributed ID generation and \textbf{kManager} for Helm and Kubernetes automation.}
-            \resumeItem
-                {Scorz (Large-scale multi-sensory in-home sports fan engagement)}{Streamlined IoT device onboarding by automating AWS certificate generation, firmware signing, and device provisioning processes, reducing deployment time from \textbf{7 days to 2 hours} and enabling secure production rollout of \textbf{4500} connected devices for WJHC and FIFA 2022.}      
-            \resumeItemC
-                {Refactored and migrated \textbf{11} Spring Boot microservices from version \textit{2.4.0 to 3.0.0}. Overall maintained \textbf{23} microservices and \textbf{Kafka Sync Connectors}.}
-            \resumeItem
-                {Pallete (Platform for communication and interaction among student stakeholders in US)}{Migrated PHP/MySQL configuration to \textbf{React, FastAPI with AWS Aurora}. Transitioned to AWS instance of \textbf{RHEL} with Amplify, resulting in a \textbf{37\%} cost reduction.}
-            \resumeItem
-                {Paws (CRM for Pallete)}
-                {Led monolithic NestJS API refactoring to serverless AWS Lambda architecture achieving \textbf{30\%} faster response times and \textbf{65\%} cost reduction, while developing a multi-tenant JavaScript SDK library (similar to JSForce) that encapsulates CRM API access through asynchronous function calls for streamlined integration.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[]{awesome-cv}
+\usepackage{textcomp}
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
 
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
 
-% -- [Projects]
-\section{Projects}
-    \resumeSubHeadingListStart
-        \resumeSubItem
-            {Qode - Online code execution engine}
-            {Developed a secure platform supporting \textbf{12} programming languages with concurrent user testing capabilities, implementing Redis-based queue management for load balancing, Linux cgroups isolation via Isolate for sandboxed execution, and Server-Sent Events for real-time output streaming.\\
-	    \textbf{Technologies}: Go, Cgroups V2, Redis, Isolate, Docker | \textcolor{blue}{\href{https://github.com/shaiq-dev/qode}{GitHub}} - \textcolor{blue}{\href{https://qode.run}{Demo}}}
-        \resumeSubItem
-        {Panic Alarm}
-        {A smartwatch powered by AWS IoT Core, to detect \textbf{Atrial fibrillation}, measure \textbf{sinus rhythm} (ECG), real time location tracking, heart health alerts and emergency triggers.\\
-	\textbf{Technologies}: ESP8266, MAX30102, Aws IOT, Next.JS, Prisma Accelerate | \textcolor{blue}{\href{https://github.com/shaiq-dev/panic-alarm}{GitHub}} - \textcolor{blue}{\href{https://panicalarm.shaiq.dev}{Demo}}}
-    \resumeSubHeadingListEnd
-  
-% -- [Skills]
-\section{Skills}
-    \resumeSubHeadingListStart
-        \item{\textbf{Programming}: Proficient in Python, Java, C, Go. Experienced with JS/TS, PHP, SQL, Kotlin.}
-        \item{\textbf{Frameworks}: Spring Boot, Mono, Mux, Next Js, Nest JS, FastAPI, Lambda, gRPC.}
-        \item{\textbf{DevOps Tools and Utilities}: Git, Docker, AWS, GraphQL, MongoDB, PostgreSQL, Aerospike, Redis, Kafka, Aurora, Kubernetes.}
-    \resumeSubHeadingListEnd
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-red}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
 
-% -- Version
-% -- It is replaced by the GitHub action with commit SHA when publishing to Cloudflare R2
-\vspace{16pt}
-\smallskip
-\begin{footnotesize}
-    GitHub \the\month.\the\year.__VERSION__
-\end{footnotesize}
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+    \begin{document}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Profile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\headerfirstnamestyle{Kevin} \headerlastnamestyle{Rodríguez Rodríguez} \\
+	\vspace{2mm}
+	{\faEnvelope\ kyrodriguez97@gmail.com} | {\faMobile\ +573103380312} | {\faMapMarker\ Bogotá D.C - Colombia} | {\faLink\ https://kevyder.dev/}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Experience}
+\begin{cventries}
+	\cventry
+	{Backend Developer}
+	{Simetrik}
+	{Bogotá D.C - Colombia, Remote}
+	{May 2024 – May 2025}
+	{\begin{cvitems}
+		\item {Microservice development with Python, FastAPI, PostgreSQL and AWS}
+		\item {Development of Python Unit Test}
+		\item {Implemented continuous integration for automated testing of codebase.}
+		\item {Conducted code reviews}
+		\item {Participated in agile development sprints to deliver features on time.}
+		\end{cvitems}}
+	\cventry
+	{Backend Engineer}
+	{KLYM}
+	{Bogotá D.C - Colombia, Remote}
+	{February 2023 – July 2023}
+	{\begin{cvitems}
+		\item {Python and Django applications support and development.}
+		\item {Collaborated with cross-functional teams to define project requirements.}
+		\item {Developed and executed pytest tests for Python and Django applications.}
+		\item {Implemented continuous integration for automated testing of codebase.}
+		\item {Conducted code reviews}
+		\item {Participated in agile development sprints to deliver features on time.}
+		\end{cvitems}}
+	\cventry
+	{Backend Engineer}
+	{Elenas}
+	{Bogotá D.C - Colombia, Remote}
+	{October 2020 – July 2022}
+	{\begin{cvitems}
+		\item {Django framework development and support for GraphQL API systems.}
+		\item {Implemented security best practices to safeguard sensitive data.}
+		\item {Collaborated with the QA team to conduct thorough testing of backend systems.}
+		\item {Developed and executed pytest tests for Python and Django applications.}
+		\item {Implemented continuous integration for automated testing of codebase.}
+		\item {Conducted code reviews and mentored junior developers.}
+		\item {Participated in agile development sprints to deliver features on time.}
+		\item {Collaborated with front-end developers to integrate user-facing elements.}
+		\end{cvitems}}
+	\cventry
+	{Backend Engineer}
+	{Omnilatam/Greensill Latam}
+	{Bogotá D.C - Colombia}
+	{August 2019 – October 2020}
+	{\begin{cvitems}
+		\item {Ruby on Rails, Python, Django, and Airflow software development.}
+		\item {Designed and implemented scalable backend solutions for business applications.}
+		\item {Created scrapping workflows with Ruby on Rails and Airflow (Python)}
+		\item {Participated in agile development sprints to deliver features on time.}
+		\end{cvitems}}
+	\cventry
+	{Web Developer}
+	{DesignPlus}
+	{Bogotá D.C - Colombia}
+	{June 2017 – May 2019}
+	{\begin{cvitems}
+		\item {Web development on Ruby on Rails, Javascript, and PHP projects.}
+		\item {Collaborated with cross-functional teams to deliver high-quality web applications.}
+		\item {Provided ongoing support and maintenance for existing projects.}
+		\end{cvitems}}
+	\cventry
+	{Software developer}
+	{Serdan}
+	{Bogotá D.C - Colombia}
+	{June 2016 – July 2017}
+	{\begin{cvitems}
+		\item {Software development on PHP, jQuery, HTML, and CSS.}
+		\item {Participated in the full software development lifecycle from concept to deployment.}
+		\item {Conducted code reviews and provided constructive feedback to team members.}
+		\end{cvitems}}
+	\cventry
+	{Programmer}
+	{Samtel}
+	{Bogotá D.C - Colombia}
+	{June 2015 – March 2016}
+	{\begin{cvitems}
+		\item {Development and support on VB6 software.}
+		\item {Collaborated with the team to analyze and troubleshoot software issues.}
+		\item {Assisted in the design and implementation of new software features.}
+		\end{cvitems}}
+\end{cventries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Education}
+\begin{cventries}
+	\cventry
+	{Technologist in ADSI}
+	{SENA}
+	{Bogotá D.C - Colombia}
+	{January 2014 – December 2016}
+	{}
+	\cventry
+	{University in Software Engineer}
+	{UNINPAHU}
+	{Bogotá D.C - Colombia}
+	{January 2017 – June 2019}
+	{}
+\end{cventries}
 
+\vspace{-2mm}
+\cvsection{Skills}
+\begin{cventries}
+	\cventry
+	{}
+	{\def\arraystretch{1.15}{\begin{tabular}{ l l }
+		Programming Languages:  & {\skill{ Python, Javscript, Ruby}} \\
+		Frameworks:  & {\skill{ Django, FastAPI, Django REST framework, Flask, Vue JS, Ruby on Rails}} \\
+		\end{tabular}}}
+	{}
+	{}
+	{}
+\end{cventries}
 
-% -- Document Ends
+\vspace{-7mm}
+\cvsection{Some resources}
+\begin{cventries}
+	\cventry
+	{Github}
+	{Github}
+	{}
+	{https://github.com/kevyder}
+	{}
+	
+	\vspace{-5mm}
+	\cventry
+	{LinkedIn profile}
+	{LinkedIn}
+	{}
+	{www.linkedin.com/in/kevin-rodriguez-backend-developer}
+	{}
+	
+	\vspace{-5mm}
+\end{cventries}
+\cvsection{About me}
+\begin{cvhonors}
+	\cvhonor
+	{I\textquotesingle{}m Kevin Rodríguez, a passionate, and creative software engineer. Born and raised in Bogotá D.C, Colombia, I consider myself a programming and technology enthusiast. I thrive on learning and find joy in sharing my knowledge with others. My journey is a continuous exploration of the dynamic world of technology, and I\textquotesingle{}m excited about the endless possibilities it offers}
+	{}
+	{}
+	{}
+\end{cvhonors}
+\ 
 \end{document}
