@@ -12,4 +12,4 @@ input="resume.tex"
 sed -i -e "s/__VERSION__/$(git rev-parse --short=8 HEAD)/" $(pwd)/src/$input
 
 docker build -t $image .
-docker run --rm -v $(pwd)/src:/data $image pdflatex $input
+docker run --rm -v $(pwd)/src:/data $image xelatex $input

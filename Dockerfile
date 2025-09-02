@@ -17,5 +17,5 @@ RUN tlmgr update --self && \
 
 
 # To build the resume, mount the LaTeX source folder to /data:
-#   docker run --rm -v $(pwd)/src:/data latex-builder pdflatex resume.tex
+#   docker run --rm -v $(pwd)/src:/data latex-builder xelatex resume.tex
 WORKDIR /data

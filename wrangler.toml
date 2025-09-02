@@ -1,13 +1,13 @@
-name = "shaiq-resume-api"
+name = "kevyder-resume-api"
 main = "worker/index.js"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
 r2_buckets = [
-    { binding = "RESUME_BUCKET", bucket_name = "shaiq-resume-storage" },
+    { binding = "RESUME_BUCKET", bucket_name = "kevyder" },
 ]
 
-routes = [{ pattern = "resume.shaiq.dev", custom_domain = true }]
+routes = [{ pattern = "resume.kevyder.dev", custom_domain = true }]
 
 [observability.logs]
 enabled = true
