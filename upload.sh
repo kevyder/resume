@@ -3,7 +3,7 @@
 set -euo pipefail
 
 version=$(git rev-parse --short=8 HEAD)
-bucket=shaiq-resume-storage
+bucket=kevyder
 
 # aws cli is pre installed in github hosted runners
 # R2 is S3 API compatible
