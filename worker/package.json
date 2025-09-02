@@ -12,6 +12,6 @@
   "author": "Shaiq Kar",
   "license": "MIT",
   "dependencies": {
-    "wrangler": "^4.27.0"
+    "wrangler": "4.33.2"
   }
 }
